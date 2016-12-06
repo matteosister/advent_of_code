@@ -25,12 +25,16 @@ defmodule Test2 do
   "82958"
   """
   def simple_pad(input) do
-    [_start | code] = input
-    |> Enum.reduce([5], fn digit, acc ->
-      find_digit(digit, acc, &find_simple_pad_digit/2)
+    input
+    |> Enum.reduce(nil, fn
+      instruction, nil ->
+        find_digit(instruction, [5], &find_simple_pad_digit/2)
+      instruction, acc ->
+        find_digit(instruction, acc, &find_simple_pad_digit/2)
     end)
     |> Enum.reverse
-    Enum.join(code, "")
+    |> List.delete_at(0)
+    |> Enum.join
   end
 
   defp find_simple_pad_digit(?U, num) when num in [1,2,3], do: num
@@ -56,12 +60,16 @@ defmodule Test2 do
   "B3DB8"
   """
   def complex_pad(input) do
-    [_start | code] = input
-    |> Enum.reduce([5], fn digit, acc ->
-      find_digit(digit, acc, &find_complex_pad_digit/2)
+    input
+    |> Enum.reduce(nil, fn
+      instruction, nil ->
+        find_digit(instruction, [5], &find_complex_pad_digit/2)
+      instruction, acc ->
+        find_digit(instruction, acc, &find_complex_pad_digit/2)
     end)
     |> Enum.reverse
-    Enum.join(code, "")
+    |> List.delete_at(0)
+    |> Enum.join
   end
 
   @doc """
