@@ -1,6 +1,7 @@
 defmodule AdvofcodeTest do
   use ExUnit.Case
-  doctest Test1
-  doctest Test2
 
+  doctest Day1
+  doctest Day2
+  doctest Day3
 end

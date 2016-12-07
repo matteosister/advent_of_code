@@ -1,17 +1,17 @@
-defmodule Test1 do
+defmodule Day1 do
   @directions [:N, :E, :S, :W]
 
   @doc """
-  iex> Test1.distance("R2, L3")
+  iex> Day1.distance("R2, L3")
   5
 
-  iex> Test1.distance("R2, R2, R2")
+  iex> Day1.distance("R2, R2, R2")
   2
 
-  iex> Test1.distance("R5, L5, R5, R3")
+  iex> Day1.distance("R5, L5, R5, R3")
   12
 
-  iex> Test1.distance("R5, L2, L1, R1, R3, R3, L3, R3, R4, L2, R4, L4, R4, R3, L2, L1, L1, R2, R4, R4, L4, R3, L2, R1, L4, R1, R3, L5, L4, L5, R3, L3, L1, L1, R4, R2, R2, L1, L4, R191, R5, L2, R46, R3, L1, R74, L2, R2, R187, R3, R4, R1, L4, L4, L2, R4, L5, R4, R3, L2, L1, R3, R3, R3, R1, R1, L4, R4, R1, R5, R2, R1, R3, L4, L2, L2, R1, L3, R1, R3, L5, L3, R5, R3, R4, L1, R3, R2, R1, R2, L4, L1, L1, R3, L3, R4, L2, L4, L5, L5, L4, R2, R5, L4, R4, L2, R3, L4, L3, L5, R5, L4, L2, R3, R5, R5, L1, L4, R3, L1, R2, L5, L1, R4, L1, R5, R1, L4, L4, L4, R4, R3, L5, R1, L3, R4, R3, L2, L1, R1, R2, R2, R2, L1, L1, L2, L5, L3, L1")
+  iex> Day1.distance("R5, L2, L1, R1, R3, R3, L3, R3, R4, L2, R4, L4, R4, R3, L2, L1, L1, R2, R4, R4, L4, R3, L2, R1, L4, R1, R3, L5, L4, L5, R3, L3, L1, L1, R4, R2, R2, L1, L4, R191, R5, L2, R46, R3, L1, R74, L2, R2, R187, R3, R4, R1, L4, L4, L2, R4, L5, R4, R3, L2, L1, R3, R3, R3, R1, R1, L4, R4, R1, R5, R2, R1, R3, L4, L2, L2, R1, L3, R1, R3, L5, L3, R5, R3, R4, L1, R3, R2, R1, R2, L4, L1, L1, R3, L3, R4, L2, L4, L5, L5, L4, R2, R5, L4, R4, L2, R3, L4, L3, L5, R5, L4, L2, R3, R5, R5, L1, L4, R3, L1, R2, L5, L1, R4, L1, R5, R1, L4, L4, L4, R4, R3, L5, R1, L3, R4, R3, L2, L1, R1, R2, R2, R2, L1, L1, L2, L5, L3, L1")
   287
   """
   def distance(input) do
@@ -23,10 +23,10 @@ defmodule Test1 do
   end
 
   @doc """
-  iex> Test1.first_twice_location("R8, R4, R4, R8")
+  iex> Day1.first_twice_location("R8, R4, R4, R8")
   4
 
-  iex> Test1.first_twice_location("R5, L2, L1, R1, R3, R3, L3, R3, R4, L2, R4, L4, R4, R3, L2, L1, L1, R2, R4, R4, L4, R3, L2, R1, L4, R1, R3, L5, L4, L5, R3, L3, L1, L1, R4, R2, R2, L1, L4, R191, R5, L2, R46, R3, L1, R74, L2, R2, R187, R3, R4, R1, L4, L4, L2, R4, L5, R4, R3, L2, L1, R3, R3, R3, R1, R1, L4, R4, R1, R5, R2, R1, R3, L4, L2, L2, R1, L3, R1, R3, L5, L3, R5, R3, R4, L1, R3, R2, R1, R2, L4, L1, L1, R3, L3, R4, L2, L4, L5, L5, L4, R2, R5, L4, R4, L2, R3, L4, L3, L5, R5, L4, L2, R3, R5, R5, L1, L4, R3, L1, R2, L5, L1, R4, L1, R5, R1, L4, L4, L4, R4, R3, L5, R1, L3, R4, R3, L2, L1, R1, R2, R2, R2, L1, L1, L2, L5, L3, L1")
+  iex> Day1.first_twice_location("R5, L2, L1, R1, R3, R3, L3, R3, R4, L2, R4, L4, R4, R3, L2, L1, L1, R2, R4, R4, L4, R3, L2, R1, L4, R1, R3, L5, L4, L5, R3, L3, L1, L1, R4, R2, R2, L1, L4, R191, R5, L2, R46, R3, L1, R74, L2, R2, R187, R3, R4, R1, L4, L4, L2, R4, L5, R4, R3, L2, L1, R3, R3, R3, R1, R1, L4, R4, R1, R5, R2, R1, R3, L4, L2, L2, R1, L3, R1, R3, L5, L3, R5, R3, R4, L1, R3, R2, R1, R2, L4, L1, L1, R3, L3, R4, L2, L4, L5, L5, L4, R2, R5, L4, R4, L2, R3, L4, L3, L5, R5, L4, L2, R3, R5, R5, L1, L4, R3, L1, R2, L5, L1, R4, L1, R5, R1, L4, L4, L4, R4, R3, L5, R1, L3, R4, R3, L2, L1, R1, R2, R2, R2, L1, L1, L2, L5, L3, L1")
   133
   """
   def first_twice_location(input) do
@@ -48,10 +48,10 @@ defmodule Test1 do
   end
 
   @doc """
-  iex> Test1.move("R1", [%{dir: :N, x: 0, y: 0}])
+  iex> Day1.move("R1", [%{dir: :N, x: 0, y: 0}])
   [%{dir: :E, x: 0, y: 1}, %{dir: :N, x: 0, y: 0}]
 
-  iex> Test1.move("R2", [%{dir: :E, x: 0, y: 1}])
+  iex> Day1.move("R2", [%{dir: :E, x: 0, y: 1}])
   [%{dir: :S, x: -2, y: 1}, %{dir: :S, x: -1, y: 1}, %{dir: :E, x: 0, y: 1}]
   """
   def move(<< turn_to::binary-size(1), steps::binary >>, acc = [pos = %{dir: dir} | _]) do
@@ -69,19 +69,19 @@ defmodule Test1 do
   end
 
   @doc """
-  iex> Test1.change_direction(:N, "R")
+  iex> Day1.change_direction(:N, "R")
   :E
 
-  iex> Test1.change_direction(:E, "R")
+  iex> Day1.change_direction(:E, "R")
   :S
 
-  iex> Test1.change_direction(:E, "L")
+  iex> Day1.change_direction(:E, "L")
   :N
 
-  iex> Test1.change_direction(:E, "R")
+  iex> Day1.change_direction(:E, "R")
   :S
 
-  iex> Test1.change_direction(:W, "R")
+  iex> Day1.change_direction(:W, "R")
   :N
   """
   def change_direction(dir, "R") do
@@ -97,13 +97,13 @@ defmodule Test1 do
   end
 
   @doc """
-  iex> Test1.new_index(1)
+  iex> Day1.new_index(1)
   1
 
-  iex> Test1.new_index(5)
+  iex> Day1.new_index(5)
   1
 
-  iex> Test1.new_index(-1)
+  iex> Day1.new_index(-1)
   3
   """
   def new_index(num) when num > 3, do: new_index(num - 4)
