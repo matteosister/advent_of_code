@@ -7,5 +7,8 @@ defmodule AdvofcodeTest do
   #doctest Day4
   #doctest Day5
   #doctest Day6
-  doctest Day7
+  #doctest Day7
+  doctest Day8
+  doctest Day8.Pixel
+  doctest Day8.Screen
 end
