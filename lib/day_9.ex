@@ -36,6 +36,5 @@ defmodule Day9 do
       nil ->
         input
     end
-
   end
 end
